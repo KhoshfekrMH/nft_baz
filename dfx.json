@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "nft_baz_backend": {
+      "main": "src/nft_baz_backend/main.mo",
+      "type": "motoko"
+    },
+    "nft_baz_frontend": {
+      "dependencies": [
+        "nft_baz_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/nft_baz_frontend/src/index.html"
+      },
+      "source": [
+        "src/nft_baz_frontend/assets",
+        "dist/nft_baz_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
